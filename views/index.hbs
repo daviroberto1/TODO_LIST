@@ -1,0 +1,44 @@
+<div class="container">
+    <h1>To-Do List</h1>
+    <form id="add_form" action="/add" method="post">
+    <input type="text" id="tarefa" name="tarefa" placeholder="Adicione uma tarefa" required>
+    <button type="submit" id="add_button">Adicionar</button>
+    </form>
+<div id="result_area">
+    {{#each tarefas}}
+    <div id="result_row">
+        <label>{{id}}</label>
+        <p id="result">{{tarefa}}</p>
+        <button id="modal_del_button">Deletar</button>
+        <button id="modal_edit_button">Editar</button>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Tem certeza que deseja deletar a tarefa ({{tarefa}})?</p>
+            <div class="del_form">
+            <form action="/del" method="post">
+            <input type="hidden" name="id" value="{{id}}">
+            <button id="del_button">Deletar</button>
+            </form>
+            <button id="cancel_button_del">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div id="myModal_edit" class="modal_edit">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Editar ({{tarefa}})?</p>
+            <div class="del_form">
+            <form action="/update" method="post">
+                <input type="text" name="input_edit" id="input_edit" placeholder="Modifique a tarefa">
+                <input type="hidden" name="id" value="{{id}}">
+                <button id="edit_button">Editar</button>
+            </form>
+            <button id="cancel_button_edit">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+</div>

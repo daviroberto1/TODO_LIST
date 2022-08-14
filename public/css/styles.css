@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+:focus{
+    outline: 0;
+}
+
+.container{
+    margin: 40px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#add_form{
+    display: flex;
+    flex-direction: column;
+}
+
+#tarefa, #add_button, #result, #input_edit {
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+} 
+
+#tarefa, #input_edit{
+    border-radius: 15px;
+    border: 0;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%), 0 1px 4px 0 rgb(0 0 0 / 4%);
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+#add_button {
+    width: 250px;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 0;
+    background: #031927;
+    color: white;
+}
+
+#result_area{
+    margin-top: 30px;
+}
+
+#result_row{
+    display: flex;
+    align-items: center
+}
+
+#result_row label, #result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#result_row label{
+    width: 60px;
+    height: 40px;
+    border-radius:15px 0 0 15px;
+    background-color: #031927;
+    color: white;
+}
+
+#result{
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%), 0 1px 4px 0 rgb(0 0 0 / 4%);
+}
+
+#modal_del_button, #modal_edit_button{
+    width: 60px;
+    height: 40px;
+    margin: 0 auto;
+    
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+#modal_del_button {
+  background-color: #d11a2a;
+}
+#modal_edit_button{
+  background-color: #0000FF;
+  border-radius:0 15px 15px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal_edit {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+
+  .modal-content {
+    text-align: center;
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .del_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #del_button, #cancel_button_del,#cancel_button_edit, #edit_button{
+    width: 80px;
+    height: 40px;
+    border-radius:10px;
+    border: 0;
+    color: white;
+    cursor: pointer;
+  }
+  #del_button{
+    background-color: #d11a2a;
+  }
+  #cancel_button_del,#cancel_button_edit{
+    background-color: #555;
+    margin-left: 10px;
+  }
+
+  #edit_button{
+    background-color: #0000FF;
+    margin-left: 5px;
+  }
